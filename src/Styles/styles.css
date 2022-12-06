@@ -1,0 +1,41 @@
+.hide{
+    display: none
+}
+.nounDiv{
+    display: inline-block;
+}
+.nounDiv2{
+    display: block;
+}
+.nounsDiv{
+    border: 1px solid black;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 8px;
+}
+.nounsDiv:hover{
+    background-color: darkkhaki;
+}
+.inline{
+    display: inline-block;
+    margin: 5px;
+}
+.bottom{
+    margin-bottom: 8px;
+}
+.border{
+    border: 1px solid black;
+    margin: 5px;
+}
+.border:hover{
+    background-color: aqua;
+}
+.border2{
+    display: inline-block;
+    border: 1px solid black;
+    margin: 5px;
+}
+.border2:hover{
+    background-color: aqua;
+}

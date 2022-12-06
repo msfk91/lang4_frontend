@@ -29,8 +29,8 @@ export class Noun  {
   
     this.detailsArr_si=[]
     this.detailsArr_pl=[]
-    this.detailsArr_si.push({title:"Phrases of Being", details: this.being_si})
-    this.detailsArr_pl.push({title:"Phrases of Being", details: this.being_pl})
+    this.detailsArr_si.push({title:"Phrases of Being", details: this.being_si, name: "being_si"})
+    this.detailsArr_pl.push({title:"Phrases of Being", details: this.being_pl, name: "being_pl"})
   
     if(status == 'h'){ 
       this.taking_si=[
@@ -91,8 +91,8 @@ export class Noun  {
       
       ]
       
-      this.detailsArr_si.push({title:"Phrases of Taking", details: this.taking_si})
-      this.detailsArr_pl.push({title:"Phrases of Taking", details: this.taking_pl})
+      this.detailsArr_si.push({title:"Phrases of Taking", details: this.taking_si, name:"taking_si"})
+      this.detailsArr_pl.push({title:"Phrases of Taking", details: this.taking_pl, name:"taking_pl"})
      
     if(status == 'h'){ 
       this.giving_si=[
@@ -152,8 +152,8 @@ export class Noun  {
         "He / She is not giving them (the " +this.plural+")",   
       ]
       
-    this.detailsArr_si.push({title:"Phrases of Giving", details: this.giving_si})
-    this.detailsArr_pl.push({title:"Phrases of Giving", details: this.giving_pl})
+    this.detailsArr_si.push({title:"Phrases of Giving", details: this.giving_si, name:"giving_si"})
+    this.detailsArr_pl.push({title:"Phrases of Giving", details: this.giving_pl, name:"giving_pl"})
   
       this.demon_si = [
         "this " + this.sing,
@@ -179,8 +179,8 @@ export class Noun  {
       this.demon_pl_trl=[]
       
         
-    this.detailsArr_si.push({title:"Demonstratives", details: this.demon_si})
-    this.detailsArr_pl.push({title:"Demonstratives", details: this.demon_pl})
+    this.detailsArr_si.push({title:"Demonstratives", details: this.demon_si, name:"demon_si"})
+    this.detailsArr_pl.push({title:"Demonstratives", details: this.demon_pl, name:"demon_pl"})
   
       this.basic_poss = [
         "my",
@@ -226,8 +226,8 @@ export class Noun  {
         }
       });
       
-    this.detailsArr_si.push({title:"Possesives", details: this.poss_si})
-    this.detailsArr_pl.push({title:"Possesives", details: this.poss_pl})
+    this.detailsArr_si.push({title:"Possesives", details: this.poss_si, name:"poss_si"})
+    this.detailsArr_pl.push({title:"Possesives", details: this.poss_pl, name:"poss_pl"})
     
     this.basic_condition=[
       "good",
@@ -251,8 +251,8 @@ export class Noun  {
         )
     })
     
-    this.detailsArr_si.push({title:"Phrases of Condition", details: this.condition_si})
-    this.detailsArr_pl.push({title:"Phrases of Condition", details: this.condition_pl})
+    this.detailsArr_si.push({title:"Phrases of Condition", details: this.condition_si, name:"condition_si"})
+    this.detailsArr_pl.push({title:"Phrases of Condition", details: this.condition_pl, name:"condition_pl"})
       
     this.size_si=[
       "big "+this.sing,
@@ -279,8 +279,8 @@ export class Noun  {
     
     ]
   
-      this.detailsArr_si.push({title:"Phrases of Size", details: this.size_si})
-      this.detailsArr_pl.push({title:"Phrases of Size", details: this.size_pl})
+      this.detailsArr_si.push({title:"Phrases of Size", details: this.size_si, name:"size_si"})
+      this.detailsArr_pl.push({title:"Phrases of Size", details: this.size_pl, name:"size_pl"})
       
     this.basic_age=[
       "old",
@@ -305,8 +305,8 @@ export class Noun  {
       )
     }) 
     
-    this.detailsArr_si.push({title:"Phrases of Age", details: this.age_si})
-    this.detailsArr_pl.push({title:"Phrases of Age", details: this.age_pl})
+    this.detailsArr_si.push({title:"Phrases of Age", details: this.age_si, name:"age_si"})
+    this.detailsArr_pl.push({title:"Phrases of Age", details: this.age_pl, name:"age_pl"})
    
     this.basic_quantity_si=[
       "only",
@@ -339,8 +339,8 @@ export class Noun  {
       )
     }) 
   
-    this.detailsArr_si.push({title:"Phrases of Quantity", details: this.quantity_si})
-    this.detailsArr_pl.push({title:"Phrases of Quantity", details: this.quantity_pl})
+    this.detailsArr_si.push({title:"Phrases of Quantity", details: this.quantity_si, name:"quantity_si"})
+    this.detailsArr_pl.push({title:"Phrases of Quantity", details: this.quantity_pl, name:"quantity_pl"})
   
     this.basic_order=[
       "first",
@@ -365,8 +365,8 @@ export class Noun  {
       )
     })
      
-    this.detailsArr_si.push({title:"Phrases of Order", details: this.order_si})
-    this.detailsArr_pl.push({title:"Phrases of Order", details: this.order_pl})
+    this.detailsArr_si.push({title:"Phrases of Order", details: this.order_si, name:"order_si"})
+    this.detailsArr_pl.push({title:"Phrases of Order", details: this.order_pl, name:"order_pl"})
   
     this.basic_compare=[
       "same",
@@ -390,8 +390,8 @@ export class Noun  {
       )
     })
   
-    this.detailsArr_si.push({title:"Phrases of Comparision", details: this.compare_si})
-    this.detailsArr_pl.push({title:"Phrases of Comparision", details: this.compare_pl})
+    this.detailsArr_si.push({title:"Phrases of Comparision", details: this.compare_si, name:"compare_si"})
+    this.detailsArr_pl.push({title:"Phrases of Comparision", details: this.compare_pl, name:"compare_pl"})
   
     this.basic_race=[
       "black",
@@ -421,8 +421,8 @@ export class Noun  {
   
     
     
-    this.detailsArr_si.push({title:"Phrases of Race", details: this.race_si})
-    this.detailsArr_pl.push({title:"Phrases of Race", details: this.race_pl})
+    this.detailsArr_si.push({title:"Phrases of Race", details: this.race_si, name:"race_si"})
+    this.detailsArr_pl.push({title:"Phrases of Race", details: this.race_pl, name:"race_pl"})
   
   
     this.basic_appearance=[
@@ -451,8 +451,8 @@ export class Noun  {
     })
   
     
-    this.detailsArr_si.push({title:"Phrases of Appearance", details: this.appear_si})
-    this.detailsArr_pl.push({title:"Phrases of Appearance", details: this.appear_pl})
+    this.detailsArr_si.push({title:"Phrases of Appearance", details: this.appear_si, name:"appear_si"})
+    this.detailsArr_pl.push({title:"Phrases of Appearance", details: this.appear_pl, name:"appear_pl"})
   
     this.basic_athletics=[
       "strong",
@@ -477,8 +477,8 @@ export class Noun  {
       )
     })
   
-    this.detailsArr_si.push({title:"Phrases of Athleticism", details: this.athletics_si})
-    this.detailsArr_pl.push({title:"Phrases of Athleticism", details: this.athletics_pl})
+    this.detailsArr_si.push({title:"Phrases of Athleticism", details: this.athletics_si, name:"athletics_si"})
+    this.detailsArr_pl.push({title:"Phrases of Athleticism", details: this.athletics_pl, name:"athletics_pl"})
     
     this.trl=[]  
     this.detailsArr_pl[(0)]
@@ -512,7 +512,7 @@ export class Noun  {
       {nounTitle: Baby.sing, nounDetails: Baby.detailsArr_si},
       {nounTitle: Baby.plural, nounDetails: Baby.detailsArr_pl},
     ]
-  const sub_category1={sub_title: "Types of People", nouns: nouns1}
+  const sub_category1={sub_title: "Types of People", nouns: nouns1, status:"hide"}
   
   const Dad = new Noun("Dad", "Dads",'m')
   const Mom = new Noun("Mom", "Moms",'f')
@@ -544,7 +544,7 @@ export class Noun  {
       {nounTitle: Sister.sing, nounDetails: Sister.detailsArr_si},
       {nounTitle: Sister.plural, nounDetails: Sister.detailsArr_pl},
     ]
-    const sub_category2={sub_title: "Family and Friends", nouns: nouns2}
+    const sub_category2={sub_title: "Family and Friends", nouns: nouns2, status:"hide"}
   
     const Grandpa = new Noun("Grandpa", "Grandpas",'m')
     const Grandma = new Noun("Grandma", "Grandmas",'f')
@@ -579,7 +579,7 @@ export class Noun  {
       
     ]
   
-    const sub_category3={sub_title: "Extended Family", nouns: nouns3}
+    const sub_category3={sub_title: "Extended Family", nouns: nouns3, status:"hide"}
   
   
   let content = 
@@ -591,6 +591,17 @@ export class Noun  {
   content.info.push(sub_category1)
   content.info.push(sub_category2)
   content.info.push(sub_category3)
+  let allnountitles=[]
+  nouns1.map((a,index)=>{
+    allnountitles.push(a.nounTitle)
+  })
+  nouns2.map((a,index)=>{
+    allnountitles.push(a.nounTitle)
+  })
+  nouns3.map((a,index)=>{
+    allnountitles.push(a.nounTitle)
+  })
+  export {allnountitles}
   export default content
   //console.log(content.info[2].sub_title)
   //console.log(content.info[2].nouns[3])
