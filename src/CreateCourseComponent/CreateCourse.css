@@ -1,0 +1,83 @@
+.body{
+    text-align: center;
+    background-color: grey;
+    height: 100vh;
+}
+
+.title{
+    font-size: 1.5rem;
+}
+
+.container4{
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+header{
+    margin-bottom: 5px;
+}
+
+.error2{
+    text-align: center;
+    color: red;
+    width: 250px;
+}
+
+.description{
+    font-size: 0.70rem;
+    width: 90%;
+    text-align: left;
+}
+
+.field{
+    text-align: left;
+}
+
+.TopicDiv{
+    display: inline-block;
+}
+.dropdown{
+    height: 70px;
+    overflow: auto;
+}
+.TopicInputDiv{
+    display: inline-block;
+}
+.TopicButtonDiv{
+    display: inline-block;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+.TopicOption{
+    border: 1px solid black;
+}
+.Select{
+    color: grey;
+}
+.TopicOption:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+a{
+    font-size: .80em;
+}
+.placeholder{
+    color: grey;
+    width: 200px;
+    border: 1px solid black;
+    padding-bottom: 3px;
+}
+.topicWords{
+    color: black;
+    width: 200px;
+    border: 1px solid black;
+    padding-bottom: 3px;
+}

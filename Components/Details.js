@@ -1,8 +1,7 @@
 import content from "../NounJSClasses/PeopleClass";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ACompleteContext } from "../Context/ACompleteProvider";
 import "../Styles/styles.css"
-import { DetailItem } from "./DetailItem";
 
 export function Details(props) {    
     let a = 0
@@ -12,33 +11,72 @@ export function Details(props) {
     let u = []
     let t = []
     let nd=[]
+    let value=[]
+    let val=[]
+    
+    const [Det,setDet]=useState()
+    
+    useEffect(()=>{
+        console.log("This kinda sucks")
+        setDet(props.NounTrl)
+    },[props.NounTrl] )
+
+
     const {AComplete, setAComplete}=useContext(ACompleteContext)
-    return( 
-        props.nounDetails.details.map((b, index) => {
-            return( 
+    
+        return( 
                     <div className={props.ShowDetails + " inline " }>
                         
                         <div className="inline">
-                            {b}
+                            {props.b}
                         </div>
                         <div className="bottom">
                             <input type="text" placeholder={props.b}
-                            defaultValue={props.NounTrl}
+                            value={Det}
                             className={props.noun.nounTitle+props.nounDetails.name}
                             word={props.noun.nounTitle}
                             name={props.noun.nounTitle}
                             onChange={(e)=>{
+                                setDet(e.target.value)
                                 props.nounDetails.trls = e.target.value
-                                //props.SubmitTrl(props.nounDetails.name)
                                 console.log(props.nounDetails.trls)
-                                console.log(props.nounDetails.details.indexOf(b))
+                                console.log(props.nounDetails.details.indexOf(props.b))
                                 //i[props.nounDetails.details.indexOf(props.b)] = e.target.value
                                 console.log("name attribute")
                                 console.log(document.getElementsByName(props.noun.nounTitle).length)
                                 k=document.getElementsByName(props.noun.nounTitle)
                                 for(a=0; a<k.length; a++ ){
                                     u.push(k[a].value.replace(props.NounTrl,''))
-                                    j.push(k[a].value.split(props.NounTrl))                                   
+                                    //j.push( )
+                                    val = 
+                                    { 
+                                        arr: k[a].value.split(props.NounTrl),
+                                        class: k[a].getAttribute("class")
+                                    } 
+                                    console.log("val 1")
+                                    console.log(val)
+                                    let count=0
+                                    val.arr.map( (c, index3) =>{
+                                        if(c==''){
+                                            count= count+1
+                                            val.empty = count
+                                        }
+                                    })
+                                    if(val.empty==1){
+                                        val.arr = val.arr.map((b,index2)=>{
+                                            if(props.b==""){
+                                                return props.b={v: props.b,  pofspeech: "noun"}
+                                            }
+                                            else{
+                                                return props.b={v: props.b,  pofspeech: "other"}
+                                                
+                                            }
+                                        })
+                                    }
+                                    
+                                    j.push(val)
+                                    console.log("are we there yet")
+                                    console.log(val)
                                     if(j.length>nd.length){
                                         j = j.filter((c,index3)=>{
                                             return index3>=nd.length
@@ -52,9 +90,12 @@ export function Details(props) {
                                     
                                 }
                                 
+                                //jmap(j)
                                 
                                 console.log(setAComplete)
                                 props.setLoadAComplete({
+                                    id: props.noun.nounTitle+props.nounDetails.name,
+                                    type: props.noun.nounTitle,
                                     title: u.toString().replaceAll(",",",  "), 
                                     info: j
                                 })
@@ -108,8 +149,8 @@ export function Details(props) {
                                 //t.push(props.LoadAComplete)
                                 //props.setAComplete(t)
                                 console.log("getting it I think")
-                                
-                                
+                                console.log(props.LoadAComplete)
+                                console.log(j)
                                 //console.log(k)
                                 //console.log(j)
                                 //props.setTrl(()=>{ props.Trl[props.nounDetails.details.indexOf(props.b)]=
@@ -117,7 +158,7 @@ export function Details(props) {
                                 //props.setTrl( [ props.Trl[props.nounDetails.details.indexOf(props.b)] = i ])
                                 //props.setTrl(p)
                                 
-                                
+                                //jmap(j)
                             }}
                             />
                             
@@ -125,21 +166,5 @@ export function Details(props) {
                     </div>
                 
             )
-        })
-    )
 
 }
-/*
-
-                        <DetailItem
-                        HideDetailsMenu={props.HideDetailsMenu}
-                        setTrl={props.setTrl}
-                        Trl={props.Trl}
-                        j={props.j}
-                        setj={props.setj}
-                        b={b}
-                        ShowDetails={props.ShowDetails}
-                        NounTrl={props.NounTrl}
-                        nounDetails={props.nounDetails}
-                        />
-*/

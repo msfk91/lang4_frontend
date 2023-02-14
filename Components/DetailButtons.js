@@ -3,6 +3,7 @@ import content from "../NounJSClasses/PeopleClass";
 import { useState } from "react";
 import { NounSubCategory } from "./NounSubCategory";
 import { Details } from "./Details"
+import { DetailMap } from "./DetailMap"
 import "../Styles/styles.css"
 
 export default function DetailButtons(props) {
@@ -16,7 +17,7 @@ export default function DetailButtons(props) {
     } 
     const [Trl, setTrl] =useState([])
     const [ LoadTrl, setLoadTrl ] = useState([])
-  
+    const [Det, setDet] = useState()
     return (
         <div>
             <div>
@@ -34,10 +35,11 @@ export default function DetailButtons(props) {
                     </div>
                     
                     <div className={ShowDetails}>
-                    <Details
+                    <DetailMap
                         LoadAComplete={props.LoadAComplete}
                         setLoadAComplete={props.setLoadAComplete}
-                        
+                        Det={Det}
+                        setDet={setDet}
                         setLoadTrl={setLoadTrl}
                         noun={props.noun}
                         
@@ -56,11 +58,9 @@ export default function DetailButtons(props) {
                         onClick={()=>{
                             if(LoadTrl.toString()!==""){
                                 setTrl(LoadTrl)
-                            }else(
-                                setTrl('')
-                            )
-                            //setTrl(LoadTrl) 
+                            }
                         }}>
+                            
                             Submit
                         </div>
                     </div>

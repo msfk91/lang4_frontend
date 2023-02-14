@@ -1,0 +1,17 @@
+
+.body4{
+    align-content: center;
+}
+
+.container3{
+    width: 300px;
+    background-color: white;
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.courseTitle{
+    text-align: center;
+}

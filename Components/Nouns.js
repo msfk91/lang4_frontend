@@ -1,8 +1,8 @@
 import content from "../NounJSClasses/PeopleClass";
 import { NounSubCategory } from "./NounSubCategory";
-import { Details } from "./DetailMap.js"
+import { Details } from "./DetailButtonMap.js"
 import { useState } from "react";
-import { NounButtons } from "./NounButtons";
+import { NounInputButtons } from "./NounInputButtons";
 import "../Styles/styles.css"
 
 export function Nouns(props) {
@@ -26,19 +26,21 @@ export function Nouns(props) {
     return( 
         props.sub_category.nouns.map((noun,index)=>{
             return(
-                <div className={props.ShowNouns}>
-                    <div className={"inline " + "nounDiv" }>
-                        {noun.nounTitle}
+                <div>
+                    <div className={props.ShowNouns +" border3"+ " inline" }>
+                        <div className={"inline " + "nounDiv" }>
+                            {noun.nounTitle}
+                        </div>
+                        
+                        <NounInputButtons
+                        AComplete={AComplete}
+                        setAComplete={setAComplete}
+                        noun={noun}
+                        ShowNouns={props.ShowNouns}
+                        LoadAComplete={LoadAComplete}
+                        setLoadAComplete={setLoadAComplete}
+                        />
                     </div>
-
-                    <NounButtons
-                    AComplete={AComplete}
-                    setAComplete={setAComplete}
-                    noun={noun}
-                    ShowNouns={props.ShowNouns}
-                    LoadAComplete={LoadAComplete}
-                    setLoadAComplete={setLoadAComplete}
-                    />
                 </div>
             )
         })

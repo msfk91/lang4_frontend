@@ -1,0 +1,25 @@
+.courseTitle{
+    text-align: left;
+}
+.courseLabel{
+    display: inline-block;   
+    text-align: justify;
+    margin-right: 8px;
+    border-bottom: 1px solid black;
+}
+.language{
+    width: 80px;
+}
+.topic{
+    width: 80px;
+}
+.courseValue{
+    display: inline-block
+}
+.translateDiv{
+    color: blue;
+}
+.translateDiv:hover{
+    color: red;
+    cursor: pointer;
+}

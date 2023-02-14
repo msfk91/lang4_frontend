@@ -1,0 +1,3 @@
+Check out Net Ninja video 11 
+in the Mern Auth series 
+to figure out log out hook specifics

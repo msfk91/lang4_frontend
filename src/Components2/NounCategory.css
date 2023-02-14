@@ -1,0 +1,17 @@
+
+.titlediv2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 45%;
+    vertical-align: middle;
+    
+}
+.container2{
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+}

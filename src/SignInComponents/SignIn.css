@@ -1,0 +1,88 @@
+
+
+.headerBody{
+    text-align: center;
+    background-color: grey;
+}
+.body{
+    text-align: center;
+    background-color: grey;
+    height: 100vh;
+}
+.signOutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 2px solid black;
+    width: 85%;
+    margin: 0 auto;
+    background-color: white;
+    vertical-align: middle;
+    
+}
+.title{
+    text-align: center;
+    grid-column: 3;
+}
+.signOutDiv{
+    text-align: right;
+    grid-column: 5;
+    margin: 5px;
+    
+}
+.signOutDiv:hover{
+    color: blue;
+    cursor: pointer;
+}   
+.myCoursesDiv{
+    text-align: left;
+    grid-column: 1;
+    margin: 5px;
+}
+.myCoursesDiv:hover{
+    color: blue;
+    cursor: pointer;
+}
+.titlediv2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    
+}
+header{
+    grid-column: 3;
+}
+.title{
+    font-size: 1.5rem;
+}
+
+a{
+    font-size: .80em;
+}
+.container4{
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    /*margin: 20px auto;*/
+}
+
+header{
+    margin-bottom: 5px;
+}
+
+.error{
+    color: red;
+}
+.success{
+    color: rgb(0, 171, 0);
+}
+.label{
+    text-align: left;
+}

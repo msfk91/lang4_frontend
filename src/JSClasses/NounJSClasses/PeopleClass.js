@@ -38,10 +38,17 @@ export class Noun  {
         "I'm taking him / her (the " +this.sing+")",
         "You're taking him / her (the " +this.sing+")", 
         "He / She is taking him / her (the " +this.sing+")", 
+        "We are taking him / her (the " +this.sing+")",
+        "You all are taking him / her (the " +this.sing+")",
+        "They are taking him / her (the " +this.sing+")",
         "The " + this.sing + " is not taking",
         "I'm not taking him / her (the " +this.sing+")",
         "You're not taking him / her (the " +this.sing+")", 
         "He / She is not taking him / her (the " +this.sing+")", 
+        "We are not taking him / her (the " +this.sing+")",
+        "You all are not taking him / her (the " +this.sing+")",
+        "They are not taking him / her (the " +this.sing+")",
+        
       ]
     }else if(status == 'm'){
       this.taking_si=[
@@ -49,21 +56,35 @@ export class Noun  {
         "I'm taking him (the " +this.sing+")",
         "You're taking him (the " +this.sing+")", 
         "He / She is taking him (the " +this.sing+")", 
+        "We are taking him (the " +this.sing+")",
+        "You all are taking him (the " +this.sing+")",
+        "They are taking him (the " +this.sing+")",
         "The " + this.sing + " is not taking",
         "I'm not taking him (the " +this.sing+")",
         "You're not taking him (the " +this.sing+")", 
         "He / She is not taking him (the " +this.sing+")", 
+        "We are not taking him (the " +this.sing+")",
+        "You all are not taking him (the " +this.sing+")",
+        "They are not taking him (the " +this.sing+")",
+        
       ]
     }else if(status == 'f'){
       this.taking_si=[
         "The " + this.sing + " is taking",
         "I'm taking her (the " +this.sing+")",
         "You're taking her (the " +this.sing+")", 
-        "He / She is taking her (the " +this.sing+")", 
+        "He / She is taking her (the " +this.sing+")",
+        "We are taking her (the " +this.sing+")",
+        "You all are taking her (the " +this.sing+")",
+        "They are taking her (the " +this.sing+")",
         "The " + this.sing + " is not taking",
         "I'm not taking her (the " +this.sing+")",
         "You're not taking her (the " +this.sing+")", 
-        "He / She is not taking her (the " +this.sing+")", 
+        "He / She is not taking her (the " +this.sing+")",
+        "We are not taking her (the " +this.sing+")",
+        "You all are not taking her (the " +this.sing+")",
+        "They are not taking her (the " +this.sing+")",
+         
       ]
     }else{
       this.taking_si=[
@@ -71,10 +92,17 @@ export class Noun  {
         "I'm taking it (the " +this.sing+")",
         "You're taking it (the " +this.sing+")", 
         "He / She is taking it (the " +this.sing+")", 
+        "We are taking it (the " +this.sing+")",
+        "You all are taking it (the " +this.sing+")",
+        "They are taking it (the " +this.sing+")",
         "The " + this.sing + " is not taking",
         "I'm not taking it (the " +this.sing+")",
         "You're not taking it (the " +this.sing+")", 
-        "He / She is not taking it (the " +this.sing+")", 
+        "He / She is not taking it (the " +this.sing+")",
+        "We are not taking it (the " +this.sing+")",
+        "You all are not taking it (the " +this.sing+")",
+        "They are not taking it (the " +this.sing+")",
+         
       
       ]
     }
@@ -83,11 +111,18 @@ export class Noun  {
         "The " + this.plural + " are taking",
         "I'm taking them (the " +this.plural+")",
         "You're taking them (the " +this.plural+")", 
-        "He / She is taking them (the " +this.plural+")", 
+        "He / She is taking them (the " +this.plural+")",
+        "We are taking them (the " +this.plural+")",
+        "You all are taking them (the " +this.plural+")",
+        "They are taking them (the " +this.plural+")", 
         "The " + this.plural + " are not taking",
         "I'm not taking them (the " +this.plural+")",
         "You're not taking them (the " +this.plural+")", 
-        "He / She is not taking them (the " +this.plural+")", 
+        "He / She is not taking them (the " +this.plural+")",
+        "We are not taking them (the " +this.plural+")",
+        "You all are not taking them (the " +this.plural+")",
+        "They are not taking them (the " +this.plural+")",
+         
       
       ]
       
@@ -100,10 +135,18 @@ export class Noun  {
         "I'm giving him / her (the " +this.sing+")",
         "You're giving him / her (the " +this.sing+")", 
         "He / She is giving him / her (the " +this.sing+")",
+        "We are giving him / her (the " +this.sing+")",
+        "You all are giving him / her (the " +this.sing+")",
+        "They are giving him / her (the " +this.sing+")",
+        
         "The "+ this.sing + " is not giving",
         "I'm not giving him / her (the " +this.sing+")",
         "You're not giving him / her (the " +this.sing+")", 
         "He / She is not giving him / her (the " +this.sing+")", 
+        "We are not giving him / her (the " +this.sing+")",
+        "You all are not giving him / her (the " +this.sing+")",
+        "They are not giving him / her (the " +this.sing+")",
+        
       ]
     }else if(status == 'm'){
       this.giving_si=[
@@ -111,34 +154,56 @@ export class Noun  {
         "I'm giving him (the " +this.sing+")",
         "You're giving him (the " +this.sing+")", 
         "He / She is giving him (the " +this.sing+")",
+        "We are giving him (the " +this.sing+")",
+        "You all are giving him (the " +this.sing+")",
+        "They are giving him (the " +this.sing+")",
+        
         "The "+ this.sing + " is not giving",
         "I'm not giving him (the " +this.sing+")",
         "You're not giving him (the " +this.sing+")", 
         "He / She is not giving him (the " +this.sing+")", 
+        "We are not giving him (the " +this.sing+")",
+        "You all are not giving him (the " +this.sing+")",
+        "They are not giving him (the " +this.sing+")",
+        
       ]
     }else if(status == 'f'){
       this.giving_si=[
         "The "+this.sing + " is giving",
         "I'm giving her (the " +this.sing+")",
         "You're giving her (the " +this.sing+")", 
-        "He / She is giving her (the " +this.sing+")", 
+        "He / She is giving her (the " +this.sing+")",
+        "We are giving her (the " +this.sing+")",
+        "You all are giving her (the " +this.sing+")",
+        "They are giving her (the " +this.sing+")",
+         
         "The "+ this.sing + " is not giving",
         "I'm not giving her (the " +this.sing+")",
         "You're not giving her (the " +this.sing+")", 
         "He / She is not giving her (the " +this.sing+")", 
-      
+        "We are not giving her (the " +this.sing+")",
+        "You all are not giving her (the " +this.sing+")",
+        "They are not giving her (the " +this.sing+")",
+        
       ]
     }else{
       this.giving_si=[
         "The "+this.sing + " is gving",
         "I'm giving it (the " +this.sing+")",
         "You're giving it (the " +this.sing+")", 
-        "He / She is giving it (the " +this.sing+")", 
+        "He / She is giving it (the " +this.sing+")",
+        "We are giving it (the " +this.sing+")",
+        "You all are giving it (the " +this.sing+")",
+        "They are giving it (the " +this.sing+")",
+         
         "The "+ this.sing + " is not giving",
         "I'm not giving it (the " +this.sing+")",
         "You're not giving it (the " +this.sing+")", 
         "He / She is not giving it (the " +this.sing+")", 
-      
+        "We are not giving it (the " +this.sing+")",
+        "You all are not giving it (the " +this.sing+")",
+        "They are not giving it (the " +this.sing+")",
+        
       ]
     } 
       this.giving_pl=[
@@ -146,10 +211,18 @@ export class Noun  {
         "I'm giving them (the " +this.plural+")",
         "You're giving them (the " +this.plural+")", 
         "He / She is giving them (the " +this.plural+")", 
+        "We are giving them (the " +this.plural+")",
+        "You all are giving them (the " +this.plural+")",
+        "They are giving them (the " +this.plural+")",
+        
         "The "+ this.plural + " are not giving",
         "I'm not giving them (the " +this.plural+")",
         "You're not giving them (the " +this.plural+")", 
         "He / She is not giving them (the " +this.plural+")",   
+        "We are not giving them (the " +this.plural+")",
+        "You all are not giving them (the " +this.plural+")",
+        "They are not giving them (the " +this.plural+")",
+       
       ]
       
     this.detailsArr_si.push({title:"Phrases of Giving", details: this.giving_si, name:"giving_si"})
@@ -486,8 +559,8 @@ export class Noun  {
       this.trl.push(b)
     ))
   
-    }
   }
+}
   const Person = new Noun("person", "people",'h')
   const Man = new Noun("man", "men","m")
   const Woman = new Noun("woman", "women","f")
@@ -514,8 +587,9 @@ export class Noun  {
     ]
   const sub_category1={sub_title: "Types of People", nouns: nouns1, status:"hide"}
   
-  const Dad = new Noun("Dad", "Dads",'m')
-  const Mom = new Noun("Mom", "Moms",'f')
+  const Family = new Noun("family", "families",'')
+  const Dad = new Noun("dad", "dads",'m')
+  const Mom = new Noun("mom", "moms",'f')
   const Son = new Noun("son", "sons",'m')
   const Daughter = new Noun("daughter", "daughters",'f')
   const Friend = new Noun("friend", "friends",'h')
@@ -525,6 +599,8 @@ export class Noun  {
   const Sister = new Noun("sister", "sisters",'f')
   const nouns2=
     [
+      {nounTitle: Family.sing, nounDetails: Family.detailsArr_si},
+      {nounTitle: Family.plural, nounDetails: Family.detailsArr_pl},
       {nounTitle: Dad.sing, nounDetails: Dad.detailsArr_si},
       {nounTitle: Dad.plural, nounDetails: Dad.detailsArr_pl},
       {nounTitle: Mom.sing, nounDetails: Mom.detailsArr_si},
@@ -546,8 +622,9 @@ export class Noun  {
     ]
     const sub_category2={sub_title: "Family and Friends", nouns: nouns2, status:"hide"}
   
-    const Grandpa = new Noun("Grandpa", "Grandpas",'m')
-    const Grandma = new Noun("Grandma", "Grandmas",'f')
+    const Clan = new Noun("clan", "clans",'')
+    const Grandpa = new Noun("grandpa", "grandpas",'m')
+    const Grandma = new Noun("grandma", "grandmas",'f')
     const PaternalUncle = new Noun("paternal uncle", "paternal uncles",'m')
     const MaternalUncle = new Noun("maternal uncle", "maternal uncles",'m')
     const PaternalAunt = new Noun("paternal aunt", "paternal aunts",'f')
@@ -558,6 +635,8 @@ export class Noun  {
   
     const nouns3=
     [
+      {nounTitle: Clan.sing, nounDetails: Clan.detailsArr_si},
+      {nounTitle: Clan.plural, nounDetails: Clan.detailsArr_pl},
       {nounTitle: Grandpa.sing, nounDetails: Grandpa.detailsArr_si},
       {nounTitle: Grandpa.plural, nounDetails: Grandpa.detailsArr_pl},
       {nounTitle: Grandma.sing, nounDetails: Grandma.detailsArr_si},
@@ -602,11 +681,13 @@ export class Noun  {
     allnountitles.push(a.nounTitle)
   })
   export {allnountitles}
-  export default content
+  const People = content
+  //export default content
+  export default People
   //console.log(content.info[2].sub_title)
   //console.log(content.info[2].nouns[3])
-  console.log(content.info[0])
-  console.log(content.info[1])
-  console.log(content.info[2])
-  console.log(content.info)
+  //console.log(content.info[0])
+  //console.log(content.info[1])
+  //console.log(content.info[2])
+  //console.log(content.info)
   

@@ -25,12 +25,13 @@ export function NounList(props) {
             >
                 Hide Nouns    
             </div> 
-
-            <Nouns
-            ShowNouns={ShowNouns}
-            sub_category= { props.sub_category }
-            key={props.sub_category.nouns}
-            /> 
+            <div className={ShowNouns}>
+                <Nouns
+                ShowNouns={ShowNouns}
+                sub_category= { props.sub_category }
+                key={props.sub_category.nouns}
+                />
+            </div> 
         </div>
     )
 

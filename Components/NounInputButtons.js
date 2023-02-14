@@ -4,12 +4,12 @@ import { NounSubCategory } from "./NounSubCategory";
 import { useState, useContext } from "react";
 import { ACompleteContext } from "../Context/ACompleteProvider";
 import "../Styles/styles.css"
-import { NounInput } from "./NounInput"
-import { Details } from "./DetailMap";
-import { AutoFill } from "./AutoFill"
+import { Fill_Details } from "./Fill_Details"
+import { Details } from "./DetailButtonMap";
+import { AutoFill } from "./AutoFillButton"
 
 //export function DetailMenu(props) {
-export function NounButtons(props) {
+export function NounInputButtons(props) {
     //const [ShowDetailButtons, setShowDetailButtons] =useState('hide')
     const [ShowAComplete, setShowAComplete] = useState([])
     let k=[]
@@ -23,15 +23,29 @@ export function NounButtons(props) {
     
     const ShowDetailsMenu = () =>{
         setShowDetailButtons("nounDiv2")
+        setDisabled("true")
     }
     const HideDetailsMenu = () =>{
         setShowDetailButtons("hide")
+        setDisabled(!Disabled)
     }
     const [ShowDetailButtons, setShowDetailButtons] =useState('hide')
-
+    const [NounTrl, setNounTrl] =useState()
+    const [Disabled, setDisabled] =useState()
     return( 
             <>
                 < >
+                    <div >
+                        <input type="text" 
+                        placeholder={props.noun.nounTitle}
+                        size="25"
+                        disabled={Disabled}
+                        onChange={(e)=>[
+                            setNounTrl(e.target.value)
+                        ]}
+                        />    
+                    </div>
+                    <div key={props.noun} > {NounTrl}</div>
                     <div className={"inline" + " border"}
                     onClick={ShowDetailsMenu}
                     >
@@ -44,11 +58,13 @@ export function NounButtons(props) {
                     </div>
                     
                            
-                    <div className={ShowDetailButtons}>
-                        <NounInput
+                    <div>
+                        <Fill_Details
                         LoadAComplete={props.LoadAComplete}
                         setLoadAComplete={props.setLoadAComplete}
                         noun={props.noun}                        
+                        ShowDetailButtons={ShowDetailButtons}
+                        NounTrl={NounTrl}
                         />
                     </div>
                     

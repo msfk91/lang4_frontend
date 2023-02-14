@@ -1,12 +1,13 @@
-import content from "../NounJSClasses/PeopleClass";
+import content from "../JSClasses/NounJSClasses/PeopleClass";
 import { useState } from "react";
 import { NounSubCategory } from "./NounSubCategory";
 import { Details } from "./Details"
-import "../Styles/styles.css"
+import "./Styles/styles.css"
 import DetailButtons from "./DetailButtons";
+import { useAuthHook } from "../Hooks/useAuthHook";
 
-export function DetailMap(props) {
-    
+export function DetailButtonMap(props) {
+    const {translations} = useAuthHook()    
 
     
     return( 
@@ -16,6 +17,12 @@ export function DetailMap(props) {
                     <DetailButtons
                     nounDetails={nounDetails}
                     noun={props.noun}
+                    NounTrl={props.NounTrl}
+                    LoadAComplete={props.LoadAComplete}
+                    setLoadAComplete={props.setLoadAComplete}
+                    translations = {translations}
+                    setAFill={props.setAFill}
+                    sub_category={props.sub_category}
                     />                    
                 </div>
                 )
