@@ -1,24 +1,18 @@
-import React,{ useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuthHook } from '../Hooks/useAuthHook'
 import './Course.css'
 import { useGetOneCourseHook } from '../Hooks/useGetOneCourseHook'
-import { useGetTranslationsHook } from '../Hooks/useGetTranslationsHook'
 
-
-export function Course(props) {
-    const {courses, one_course} = useAuthHook()
+export function Course() {
+    const {courses} = useAuthHook()
     //const courses = props.courses
     const {getOneCourse} = useGetOneCourseHook()
-    const {getTranslations} = useGetTranslationsHook()
-    
-    const CourseDecider = async (a)=>{ 
-        if(a.topic=="People"){
-            await redirect(a)
+
+    const urlPicker = (a) =>{
+        if(a.topic=== "People"){
+            return ("/nouns/"+a._id)
         }
-    }
-    const redirect = async(a) =>{
-        window.location.href = "http://localhost:3000/nouns/"+a._id
     }
     return (
         courses.map((a,index)=>{
@@ -43,13 +37,10 @@ export function Course(props) {
                         </div>
                         <div>
                             <div className='EditLink'>
-                                <Link to={"/nouns/"+a._id}>
+                                <Link to={urlPicker(a)}>
                                     <div 
                                     onClick={ async ()=>[
-                                        await getOneCourse(a._id),
-                                        //await getTranslations(a._id),
-                                        
-                                        
+                                        await getOneCourse(a._id)
                                     ]}>
                                         translate 
                                     </div>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useAuthHook } from "./useAuthHook";
 
 export const useCreateAccountHook = () =>{
 //export const useSignInHook = () =>{
@@ -7,8 +6,6 @@ export const useCreateAccountHook = () =>{
     const [result, setresult] = useState(null)
     const [status, setstatus] = useState(null)
     const [isLoading, setisLoading] = useState(null)
-
-    const { dispatch } = useAuthHook()
 
     const createAccount = async (name, username, email, password) =>{
     //const signin = async (name, username, email, password) =>{

@@ -1,4 +1,4 @@
-import React, { useState, createContext, 
+import React, { createContext, 
     useReducer, useEffect} from "react"
 
 export const AuthContext = createContext([''])
@@ -99,7 +99,6 @@ export function AuthProvider({children}){
         const user = JSON.parse(localStorage.getItem("user"))
         const courses = JSON.parse(localStorage.getItem("courses"))
         const one_course = JSON.parse(localStorage.getItem("one_course"))
-        const create_course = JSON.parse(localStorage.getItem("create_course"))
         const translations = JSON.parse(localStorage.getItem("translations"))
         const one_translation = JSON.parse(localStorage.getItem("one_translation"))
         const all_translations = JSON.parse(localStorage.getItem("all_translations"))

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import content from "../JSClasses/NounJSClasses/PeopleClass";
 import "./Styles/styles.css"
 import { Nouns } from "./Nouns";
 

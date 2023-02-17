@@ -6,8 +6,7 @@ import { useAuthHook } from '../Hooks/useAuthHook'
 import { useCreateCourseHook } from '../Hooks/useCreateCourseHook'
 
 export default function CreateCourse() {
-  const [error, seterror] = useState([])
-
+  
   const {logout} = useLogOutHook()
   
   const {createCourse, isLoading} = useCreateCourseHook()
@@ -18,8 +17,6 @@ export default function CreateCourse() {
   const [topic, settopic] = useState({words: "Click Select Button", class:"placeholder", value:""})
   const {user, create_course} = useAuthHook()
   
-  const [TopicInput, setTopicInput] = useState()
-  const [TopicButton, setTopicButton] = useState()
   const [TopicDropDown, setTopicDropDown] = useState("none")
 
   const handleSubmit = async (e) => {
@@ -29,7 +26,7 @@ export default function CreateCourse() {
   }
 
   const handleDrop = async (e) => {
-    if(TopicDropDown=="none"){
+    if(TopicDropDown==="none"){
       setTopicDropDown("block")
     }else{
       setTopicDropDown("none")
@@ -38,7 +35,7 @@ export default function CreateCourse() {
   return (
     <div className='body'
     onClick={()=>{
-      if(TopicDropDown == "block"){
+      if(TopicDropDown === "block"){
         setTopicDropDown("none")
       }
     }}

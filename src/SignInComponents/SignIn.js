@@ -5,14 +5,13 @@ import { useSignInHook } from '../Hooks/useSignInHook'
 import { useAuthHook } from '../Hooks/useAuthHook'
 import { useLogOutHook } from '../Hooks/useLogoutHook'
 import { useGetCoursesHook } from '../Hooks/useGetCoursesHook'
-import CoursesPortal from "../CoursesPortalComponent/CoursesPortal"
 
 export default function SignIn() {
   //const [result, setresult] = useState([])
   const [email, setemail] = useState([])
   const [password, setpassword] = useState([])
  
-  const {signin, result, status, isLoading} = useSignInHook()
+  const {signin, isLoading} = useSignInHook()
   const {user} = useAuthHook()
   const {logout} = useLogOutHook()
 
@@ -24,7 +23,7 @@ export default function SignIn() {
   }
     
   useEffect(()=>{
-    if(user && user.status=="success"){
+    if(user && user.status==="success"){
       const userID = user.user._id      
       getCourses(userID)
       window.location.replace("http://localhost:3000/mycourses")
@@ -40,7 +39,7 @@ export default function SignIn() {
               </strong>
             </header>
             {user &&
-              (user.status=="success") && 
+              (user.status==="success") && 
                   <div className='signOutDiv'>
                     <div className='signOutButton' 
                     onClick={()=>{logout()}}
@@ -64,7 +63,7 @@ export default function SignIn() {
                 
                 {user && <div className={user.status}> {user.message} </div>}
 
-                { (user==null || !user|| user.status=='error') &&
+                { (user===null || !user|| user.status==='error') &&
                   <div>
                       
                       <div>

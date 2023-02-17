@@ -2,10 +2,6 @@ import { useState } from "react";
 import { useAuthHook } from "./useAuthHook";
 
 export const useCreateCourseHook = () =>{
-//export const useSignInHook = () =>{
-    //const [error, seterror] = useState(null)
-    
-    const {user} = useAuthHook()
     
     const [isLoading, setisLoading] = useState(null)
 

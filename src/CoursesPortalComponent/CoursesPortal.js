@@ -1,17 +1,15 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import { useAuthHook } from '../Hooks/useAuthHook'
 import { Link } from 'react-router-dom'
 import { useLogOutHook } from '../Hooks/useLogoutHook'
 import { useGetCoursesHook } from '../Hooks/useGetCoursesHook'
 import {Course} from './Course'
-import { useGetAllTranslationsHook } from '../Hooks/useGetAllTranslationsHook'
 import "./CoursesPortal.css"
 
 export default function CoursesPortal() {
-    const {user, courses, one_course} = useAuthHook()
+    const {user, courses} = useAuthHook()
     const {logout} = useLogOutHook()
     const {getCourses} = useGetCoursesHook()
-    const {getAllTranslations} = useGetAllTranslationsHook()
     
     useEffect(()=>{
 
@@ -19,7 +17,7 @@ export default function CoursesPortal() {
             const userID = user.user._id            
             getCourses(userID)
         }
-    },[user])
+    },[user, getCourses])
     return (
         <div>
             <div className='titlediv2'>

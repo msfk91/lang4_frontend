@@ -32,7 +32,7 @@ export class Noun  {
     this.detailsArr_si.push({title:"Phrases of Being", details: this.being_si, name: "being_si"})
     this.detailsArr_pl.push({title:"Phrases of Being", details: this.being_pl, name: "being_pl"})
   
-    if(status == 'h'){ 
+    if(status === 'h'){ 
       this.taking_si=[
         "The " + this.sing + " is taking",
         "I'm taking him / her (the " +this.sing+")",
@@ -50,7 +50,7 @@ export class Noun  {
         "They are not taking him / her (the " +this.sing+")",
         
       ]
-    }else if(status == 'm'){
+    }else if(status === 'm'){
       this.taking_si=[
         "The " + this.sing + " is taking",
         "I'm taking him (the " +this.sing+")",
@@ -68,7 +68,7 @@ export class Noun  {
         "They are not taking him (the " +this.sing+")",
         
       ]
-    }else if(status == 'f'){
+    }else if(status === 'f'){
       this.taking_si=[
         "The " + this.sing + " is taking",
         "I'm taking her (the " +this.sing+")",
@@ -129,7 +129,7 @@ export class Noun  {
       this.detailsArr_si.push({title:"Phrases of Taking", details: this.taking_si, name:"taking_si"})
       this.detailsArr_pl.push({title:"Phrases of Taking", details: this.taking_pl, name:"taking_pl"})
      
-    if(status == 'h'){ 
+    if(status === 'h'){ 
       this.giving_si=[
         "The "+this.sing + " is giving",
         "I'm giving him / her (the " +this.sing+")",
@@ -148,7 +148,7 @@ export class Noun  {
         "They are not giving him / her (the " +this.sing+")",
         
       ]
-    }else if(status == 'm'){
+    }else if(status === 'm'){
       this.giving_si=[
         "The "+this.sing + " is giving",
         "I'm giving him (the " +this.sing+")",
@@ -167,7 +167,7 @@ export class Noun  {
         "They are not giving him (the " +this.sing+")",
         
       ]
-    }else if(status == 'f'){
+    }else if(status === 'f'){
       this.giving_si=[
         "The "+this.sing + " is giving",
         "I'm giving her (the " +this.sing+")",
@@ -279,6 +279,7 @@ export class Noun  {
             )
           
         }
+        return index
       });
     
       this.poss_pl = [];
@@ -672,13 +673,13 @@ export class Noun  {
   content.info.push(sub_category3)
   let allnountitles=[]
   nouns1.map((a,index)=>{
-    allnountitles.push(a.nounTitle)
+    return allnountitles.push(a.nounTitle)
   })
   nouns2.map((a,index)=>{
-    allnountitles.push(a.nounTitle)
+    return allnountitles.push(a.nounTitle)
   })
   nouns3.map((a,index)=>{
-    allnountitles.push(a.nounTitle)
+    return allnountitles.push(a.nounTitle)
   })
   export {allnountitles}
   const People = content
