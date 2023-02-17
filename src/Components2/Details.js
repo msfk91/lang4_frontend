@@ -1,4 +1,3 @@
-import content from "../JSClasses/NounJSClasses/PeopleClass";
 import { useState, useEffect } from "react";
 //import { ACompleteContext } from "../Context/ACompleteProvider";
 import "./Styles/styles.css";
@@ -7,11 +6,7 @@ export function Details(props) {
   let k = [];
   let p = [];
   let nd = [];
-
-  let TrlArr=[];
-  let EngArr= [];  
   let t = [];
-  let y=[];  
   const [Det, setDet] = useState([]);
 
   
@@ -25,7 +20,7 @@ export function Details(props) {
       props.setDeleteFill(false)    
     }
     
-  }, [props.AutoFill, props.DeleteFill]);
+  }, [props, props.AutoFill, props.DeleteFill]);
   
 
   return (
@@ -55,7 +50,7 @@ export function Details(props) {
                   return index3 >= nd.length;
                 });
               }
-              props.setLoadTrl(p.toString().replaceAll(",", ",  "));
+              return props.setLoadTrl(p.toString().replaceAll(",", ",  "));
             });  
             
               t =

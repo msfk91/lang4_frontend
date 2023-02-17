@@ -1,19 +1,9 @@
-import content from "../JSClasses/NounJSClasses/PeopleClass";
-import {allnountitles} from "../JSClasses/NounJSClasses/PeopleClass";
-import { NounSubCategory } from "./NounSubCategory";
 import { useState, useEffect } from "react";
 import "./Styles/styles.css"
 import { DetailsMenu } from "./DetailsMenu"
-import { Details } from "./DetailButtonMap";
 
 //export function DetailMenu(props) {
 export function NounInputButtons(props) {
-    //const [ShowDetailButtons, setShowDetailButtons] =useState('hide')
-    let k=[]
-    let j=[]
-    let u =[]
-    let t=[]
-    let a=0
     
     
     const ShowDetailsMenu = () =>{
@@ -32,13 +22,14 @@ export function NounInputButtons(props) {
         
         translations.map((translation,index)=>{
           if(
-            (props.noun.nounTitle == translation.NounEnglish)
+            (props.noun.nounTitle === translation.NounEnglish)
           ){
             setNounTrl(translation.NounTranslation.toString())
-          }    
+          }
+          return index    
         })
         
-      },[])
+      },[props.noun.nounTitle])
     return( 
             <>
                 < >
@@ -54,15 +45,15 @@ export function NounInputButtons(props) {
                         />    
                     </div>
                     <div> {NounTrl}</div>
-                    <div className={"inline" + " border"}
+                    <div className={"inline border"}
                     onClick={ShowDetailsMenu}
                     >
-                        Show2     
+                        Show     
                     </div> 
-                    <div className={"inline" + " border"}
+                    <div className={"inline border"}
                     onClick={HideDetailsMenu}    
                     >
-                        Hide2    
+                        Hide    
                     </div>
                     
                            

@@ -1,7 +1,3 @@
-import content from "../JSClasses/NounJSClasses/PeopleClass";
-import { useState } from "react";
-import { NounSubCategory } from "./NounSubCategory";
-import { Details } from "./Details"
 import "./Styles/styles.css"
 import DetailButtons from "./DetailButtons";
 import { useAuthHook } from "../Hooks/useAuthHook";

@@ -1,26 +1,18 @@
 import React from "react";
-import content from "../JSClasses/NounJSClasses/PeopleClass";
 import { useState, useEffect } from "react";
-import { NounSubCategory } from "./NounSubCategory";
-import { Details } from "./Details";
 import { DetailMap } from "./DetailMap";
 import "./Styles/styles.css";
 import { useAuthHook } from "../Hooks/useAuthHook";
 import { usePostTranslationHook } from "../Hooks/usePostTranslationHook";
-import { useGetTranslationsHook } from "../Hooks/useGetTranslationsHook";
-import { useParams } from "react-router-dom";
 
 
 
 export default function DetailButtons(props) {
-  //const {one_translation} = useAuthHook()
-  const {user, one_course} = useAuthHook()
-  const {dispatch} = useAuthHook()
   
+  const {user, one_course} = useAuthHook()
+   
   const {postTranslation} = usePostTranslationHook()
   
-  const {getTranslations} = useGetTranslationsHook()
-
   const [ShowDetails, setShowDetails] = useState("hide");
 
   const ShowDetailsMenu = () => {
@@ -37,17 +29,15 @@ export default function DetailButtons(props) {
   const [Notes, setNotes] = useState([]);
   const [AutoFill, setAutoFill] = useState(false);
   const [DeleteFill, setDeleteFill] = useState(false);
-  const[TrlClass, setTrlClass] = useState([]);
-  const { courseID } = useParams()
   
   useEffect(()=>{
     const translations = JSON.parse(localStorage.getItem("translations"))
     
     translations.map((translation,index)=>{
       if(
-        (props.noun.nounTitle == translation.NounEnglish)
+        (props.noun.nounTitle === translation.NounEnglish)
         &&
-        (props.nounDetails.name == translation.TranslationType)
+        (props.nounDetails.name === translation.TranslationType)
       ){
         setTrl(translation.TranslationArr.toString())
         setNotes(translation.TranslationNotes)
@@ -66,10 +56,12 @@ export default function DetailButtons(props) {
           TranslationNotes  
         }
         setLoadTrlData(t)
-      }    
+      }
+      const y = []
+      return y
     })
     
-  },[])
+  },[props.noun.nounTitle, props.nounDetails.name])
 
   const handleSubmit = () =>{
     const courseID = one_course._id

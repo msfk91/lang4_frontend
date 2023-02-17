@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {NounCategory} from "./Components2/NounCategory.js"
 import SignIn from "./SignInComponents/SignIn"

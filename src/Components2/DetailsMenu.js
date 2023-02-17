@@ -1,6 +1,4 @@
-import content from "../JSClasses/NounJSClasses/PeopleClass";
-import { useState, useContext } from "react";
-import { allnountitles } from "../JSClasses/NounJSClasses/PeopleClass";
+import { useState } from "react";
 import "./Styles/styles.css";
 import { DetailButtonMap } from "./DetailButtonMap";
 //import { AutoFillButton } from "./AutoFillButton";

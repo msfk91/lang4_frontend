@@ -1,12 +1,8 @@
-import content from "../JSClasses/NounJSClasses/PeopleClass";
-import { useState } from "react";
-import { NounSubCategory } from "./NounSubCategory";
 import "./Styles/styles.css";
 import { Details } from "./Details";
 
 export function DetailMap(props) {
-  const [ShowDetails, setShowDetails] = useState();
-
+  
   return props.nounDetails.details.map((b, index) => {
     return (
       <Details
