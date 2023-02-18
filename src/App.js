@@ -12,11 +12,11 @@ function App() {
   return (
     
       <Routes>
-        <Route path="https://lang4-backend.onrender.com/" element={<SignIn/>} />
-        <Route path="https://lang4-backend.onrender.com/create_account" element={<CreateAccount/>} />
-        <Route path="https://lang4-backend.onrender.com/mycourses" element={<CoursesPortal/>} />
-        <Route path="https://lang4-backend.onrender.com/create_course" element={<CreateCourse/>} />
-        <Route path="https://lang4-backend.onrender.com/nouns/:courseID" element={<NounCategory/>} />
+        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/" element={<SignIn/>} />
+        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/create_account" element={<CreateAccount/>} />
+        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/mycourses" element={<CoursesPortal/>} />
+        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/create_course" element={<CreateCourse/>} />
+        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/nouns/:courseID" element={<NounCategory/>} />
       </Routes>
       
     
