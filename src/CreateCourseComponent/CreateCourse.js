@@ -67,14 +67,8 @@ export default function CreateCourse() {
                   Create Course
                 </strong>
               </header>
-              
-              { create_course===null && 
-                    <div>
-                      
-                    </div>
-                }
                 
-                { create_course!==null && 
+                { create_course.result && 
                     <div className={create_course.result.status}>
                       {create_course.result.message}
                     </div>
