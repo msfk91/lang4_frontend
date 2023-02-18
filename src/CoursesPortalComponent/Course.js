@@ -41,7 +41,7 @@ export function Course() {
                                 <Link to={urlPicker(a)}>
                                     <div 
                                     onClick={ async ()=>[
-                                        await getOneCourse(a._id)
+                                        await getOneCourse(a._id),
                                         await getTranslations(a._id)
                                     ]}>
                                         translate 
