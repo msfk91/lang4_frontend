@@ -68,12 +68,13 @@ export default function CreateCourse() {
                 </strong>
               </header>
                 
-                { create_course.result && 
-                    <div className={create_course.result.status}>
-                      {create_course.result.message}
-                    </div>
-                }
-              
+        { create_course.result && 
+            <div className={create_course.result.status}>
+              {create_course.result.message}
+            </div>
+        }
+        { create_course &&
+            <div>  
               <div>
                   <div className='label coursename'>Course Name</div>
                   <div className='description coursename'>
@@ -160,9 +161,14 @@ export default function CreateCourse() {
               <div>
                   <Link to="/mycourses">My Courses</Link>
               </div>
+              
           </div>
-        </div> 
-      </div>
+        
+        }
+        </div>
+      </div>     
     </div> 
+  </div>
   )
 }
+
