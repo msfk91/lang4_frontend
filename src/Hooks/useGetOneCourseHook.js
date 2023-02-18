@@ -13,7 +13,7 @@ export const useGetOneCourseHook = () =>{
     const getOneCourse = async ( courseID ) =>{
         setisLoading(true)
         
-        const response = await fetch("/courses/one/" + courseID)
+        const response = await fetch("https://lang4-backend.onrender.com/courses/one/" + courseID)
         const json = await response.json()
 
         if (!response.ok){

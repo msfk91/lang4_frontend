@@ -16,7 +16,7 @@ export const useLogOutHook = () => {
         //dispatch logout action
         dispatch({type: "LOGOUT" })
 
-        window.location.replace("http://localhost:3000")
+        window.location.replace("https://legendary-cascaron-c900e7.netlify.app")
     }
 
     return {logout}

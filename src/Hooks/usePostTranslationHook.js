@@ -21,7 +21,7 @@ export const usePostTranslationHook = () =>{
         setisLoading(true)
         
         
-            const response = await fetch("/translations",{
+            const response = await fetch("https://lang4-backend.onrender.com/translations",{
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({

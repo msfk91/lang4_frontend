@@ -14,7 +14,7 @@ export const useCreateAccountHook = () =>{
         setstatus(null)
 
         
-        const response = await fetch("/accounts/create",{
+        const response = await fetch("https://lang4-backend.onrender.com/accounts/create",{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({name, username, email, password})

@@ -10,7 +10,7 @@ export const useGetAllTranslationsHook = () =>{
     const getAllTranslations = async (userID) =>{
         if(isLoading){
             setisLoading(false)
-            const response = await fetch("/translations/all/"+userID)
+            const response = await fetch("https://lang4-backend.onrender.com/translations/all/"+userID)
             const json = await response.json()
     
             if (!response.ok){

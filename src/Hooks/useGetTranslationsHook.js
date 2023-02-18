@@ -14,7 +14,7 @@ export const useGetTranslationsHook = () =>{
     const getTranslations = async (courseID) =>{
         if(isLoading){
             setisLoading(false)
-            const response = await fetch("/translations/"+courseID)
+            const response = await fetch("https://lang4-backend.onrender.com/translations/"+courseID)
             const json = await response.json()
     
             if (!response.ok){
