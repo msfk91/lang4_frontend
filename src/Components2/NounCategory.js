@@ -29,13 +29,13 @@ export function NounCategory() {
                 > 
                     My Courses
                 </div>
-                {user && 
-                    <div className='signOutDiv'
-                    onClick={()=>{logout()}}
-                    > 
-                            Sign Out   
-                    </div>
-                }
+                 
+                <div className='signOutDiv'
+                onClick={()=>{logout()}}
+                > 
+                        Sign Out   
+                </div>
+                
             </div>
             <div className="container2">
 
