@@ -44,8 +44,11 @@ export default function CoursesPortal() {
             <div className='body4'>
                 <div className='container3'>
                     <div className='courseTitle'>
+                        
+                        {user === null && window.location.replace("/")}
+
                         {user && <div><strong>{user.user.username}</strong></div>}
-                    
+                        
                         <div>
                             <strong>My Courses</strong> 
                         </div>
