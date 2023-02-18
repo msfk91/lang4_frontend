@@ -1,5 +1,5 @@
 {
-  "proxy": "https://langbuild.onrender.com",
+  "proxy": "https://lang4-backend.onrender.com",
   "name": "lang4_frontend",
   "version": "0.1.0",
   "private": true,
