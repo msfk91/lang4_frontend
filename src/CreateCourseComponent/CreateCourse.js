@@ -33,7 +33,7 @@ export default function CreateCourse() {
     }
   }
   return (
-    <div className='body'
+    <div className='body2'
     onClick={()=>{
       if(TopicDropDown === "block"){
         setTopicDropDown("none")
@@ -68,12 +68,12 @@ export default function CreateCourse() {
                 </strong>
               </header>
                 
-        { create_course.result && 
+        { create_course!==null && 
             <div className={create_course.result.status}>
               {create_course.result.message}
             </div>
         }
-        { create_course &&
+        
             <div>  
               <div>
                   <div className='label coursename'>Course Name</div>
@@ -164,7 +164,7 @@ export default function CreateCourse() {
               
           </div>
         
-        }
+        
         </div>
       </div>     
     </div> 

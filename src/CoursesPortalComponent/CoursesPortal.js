@@ -50,7 +50,7 @@ export default function CoursesPortal() {
                             <strong>My Courses</strong> 
                         </div>
                         <div>
-                        <Link to="/create_course">+ Add New Course</Link>
+                        <Link to="/create-course">+ Add New Course</Link>
                         </div>
                         
                         <br/>
