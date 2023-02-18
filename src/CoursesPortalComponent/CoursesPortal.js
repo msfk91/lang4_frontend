@@ -13,9 +13,11 @@ export default function CoursesPortal() {
     
     useEffect(()=>{
 
-        if(user){
+        if(user!==null){
             const userID = user.user._id            
             getCourses(userID)
+        }else{
+            window.location.replace("/")
         }
     },[user, getCourses])
     return (
@@ -45,8 +47,6 @@ export default function CoursesPortal() {
                 <div className='container3'>
                     <div className='courseTitle'>
                         
-                        {user === null && window.location.replace("/")}
-
                         {user && <div><strong>{user.user.username}</strong></div>}
                         
                         <div>
