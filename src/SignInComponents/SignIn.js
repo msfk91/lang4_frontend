@@ -26,8 +26,9 @@ export default function SignIn() {
     if(user && user.status==="success"){
       const userID = user.user._id      
       getCourses(userID)
-      window.location.replace("http://localhost:3000/mycourses")
+      window.location.replace("https://legendary-cascaron-c900e7.netlify.app/mycourses")
     }
+    
   })
   return (
     <div>
