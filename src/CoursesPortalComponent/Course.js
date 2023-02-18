@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import { useAuthHook } from '../Hooks/useAuthHook'
 import './Course.css'
 import { useGetOneCourseHook } from '../Hooks/useGetOneCourseHook'
+import { useGetTranslationsHook } from '../Hooks/useGetTranslationsHook'
 
 export function Course() {
     const {courses} = useAuthHook()
     //const courses = props.courses
     const {getOneCourse} = useGetOneCourseHook()
-
+    const {getTranslations} = useGetTranslationsHook()
     const urlPicker = (a) =>{
         if(a.topic=== "People"){
             return ("/nouns/"+a._id)
@@ -41,6 +42,7 @@ export function Course() {
                                     <div 
                                     onClick={ async ()=>[
                                         await getOneCourse(a._id)
+                                        await getTranslations(a._id)
                                     ]}>
                                         translate 
                                     </div>
