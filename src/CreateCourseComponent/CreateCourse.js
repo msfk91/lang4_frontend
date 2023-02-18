@@ -68,6 +68,12 @@ export default function CreateCourse() {
                 </strong>
               </header>
               
+              { create_course===null && 
+                    <div>
+                      
+                    </div>
+                }
+                
                 { create_course!==null && 
                     <div className={create_course.result.status}>
                       {create_course.result.message}
@@ -166,11 +172,3 @@ export default function CreateCourse() {
     </div> 
   )
 }
-/*
-<input
-placeholder='Click Select Button' 
-type="text"
-value= {topic}
-onChange = {()=>{settopic(topic)}}
-/>
-*/
