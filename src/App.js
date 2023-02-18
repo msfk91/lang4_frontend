@@ -12,10 +12,10 @@ function App() {
   return (
     
       <Routes>
-        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/" element={<SignIn/>} />
-        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/create_account" element={<CreateAccount/>} />
+        <Route path="/" element={<SignIn/>} />
+        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/create-account" element={<CreateAccount/>} />
         <Route path="https://main--legendary-cascaron-c900e7.netlify.app/mycourses" element={<CoursesPortal/>} />
-        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/create_course" element={<CreateCourse/>} />
+        <Route path="https://main--legendary-cascaron-c900e7.netlify.app/create-course" element={<CreateCourse/>} />
         <Route path="https://main--legendary-cascaron-c900e7.netlify.app/nouns/:courseID" element={<NounCategory/>} />
       </Routes>
       
