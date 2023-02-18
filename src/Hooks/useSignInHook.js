@@ -10,7 +10,7 @@ export const useSignInHook = () =>{
     const signin = async (email, password) =>{
         setisLoading(true)
     
-        const response = await fetch("/accounts/",{
+        const response = await fetch("https://lang4-backend.onrender.com/accounts/",{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ email, password})
