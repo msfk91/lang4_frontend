@@ -16,7 +16,9 @@ export default function CoursesPortal() {
         if(user!==null){
             const userID = user.user._id            
             getCourses(userID)
-        }else{
+        }
+        console.log(user === null)
+        if(user === null){
             window.location.replace("/")
         }
     },[user, getCourses])
