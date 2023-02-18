@@ -25,7 +25,7 @@ export function NounCategory() {
                 </strong>
         
                 <div className='myCoursesDiv' 
-                onClick={()=>{window.location.replace("http://localhost:3000/mycourses")}}
+                onClick={()=>{window.location.replace("/mycourses")}}
                 > 
                     My Courses
                 </div>
