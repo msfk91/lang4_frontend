@@ -12,11 +12,11 @@ function App() {
   return (
     
       <Routes>
-        <Route path="/" element={<SignIn/>} />
-        <Route path="/create_account" element={<CreateAccount/>} />
-        <Route path="/mycourses" element={<CoursesPortal/>} />
-        <Route path="/create_course" element={<CreateCourse/>} />
-        <Route path="/nouns/:courseID" element={<NounCategory/>} />
+        <Route path="https://lang4-backend.onrender.com/" element={<SignIn/>} />
+        <Route path="https://lang4-backend.onrender.com/create_account" element={<CreateAccount/>} />
+        <Route path="https://lang4-backend.onrender.com/mycourses" element={<CoursesPortal/>} />
+        <Route path="https://lang4-backend.onrender.com/create_course" element={<CreateCourse/>} />
+        <Route path="https://lang4-backend.onrender.com/nouns/:courseID" element={<NounCategory/>} />
       </Routes>
       
     
