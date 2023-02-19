@@ -96,7 +96,7 @@ export default function SignIn() {
                       </div>
                     
                     <div>
-                        <Link to="/create_account">Create Account</Link>             
+                        <Link to="/create-account">Create Account</Link>             
                     </div>
                   </div>
                 }
