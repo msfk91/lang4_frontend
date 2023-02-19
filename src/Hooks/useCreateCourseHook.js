@@ -10,7 +10,8 @@ export const useCreateCourseHook = () =>{
     const createCourse = async (courseName, userID, language, topic) =>{
     //const signin = async (name, username, email, password) =>{
         setisLoading(true)
-        
+        //"https://lang4-backend.onrender.com/courses/create"
+        //"http://localhost:5000/courses/create"
         const response = await fetch("https://lang4-backend.onrender.com/courses/create",{
             method: "POST",
             headers: {"Content-Type": "application/json"},

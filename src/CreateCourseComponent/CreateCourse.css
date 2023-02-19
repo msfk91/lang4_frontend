@@ -21,6 +21,12 @@ header{
     margin-bottom: 5px;
 }
 
+.success2{
+    text-align: center;
+    color: rgb(0, 171, 0);
+    width: 250px;
+    
+}
 .error2{
     text-align: center;
     color: red;
@@ -29,7 +35,6 @@ header{
 
 .description{
     font-size: 0.70rem;
-    width: 90%;
     text-align: left;
 }
 

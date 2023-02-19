@@ -18,9 +18,7 @@ export default function CoursesPortal() {
             getCourses(userID)
         }
         //console.log(user === null)
-        if(user === null){
-            //window.location.replace("/")
-        }
+        
     },[user, getCourses])
     return (
         <div>

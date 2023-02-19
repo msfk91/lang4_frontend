@@ -52,13 +52,13 @@ export default function CreateCourse() {
             > 
                 My Courses
             </div>
-            {user && 
-                <div className='signOutDiv'
-                onClick={()=>{logout()}}
-                > 
-                        Sign Out   
-                </div>
-            }
+          
+            <div className='signOutDiv'
+            onClick={()=>{logout()}}
+            > 
+                    Sign Out   
+            </div>
+        
         </div>
         <div >
           <div className='container4'>
@@ -68,49 +68,53 @@ export default function CreateCourse() {
                 </strong>
               </header>
                 
-        { create_course!==null && 
-            <div className={create_course.result.status}>
-              {create_course.result.message}
-            </div>
-        }
         
-            <div>  
+        
+            <div>
+                
               <div>
-                  <div className='label coursename'>Course Name</div>
-                  <div className='description coursename'>
+                  { create_course!==null && 
+                    <div className={create_course.result.status}>
+                      {create_course.result.message}
+                    </div>
+                  }
+                  <div className='label coursename2'>Course Name</div>
+                  <div className='description coursename2'>
                       (The name of your course )
-                  </div>
+                  
                     <div className='input coursename'>
-                    <input type="text"
-                    size="30"
-                    placeholder='Course Name'
-                    value = {courseName}
-                    onChange = {(e)=> setcourseName(e.target.value) }
-                    />
+                      <input type="text"
+                      size="30"
+                      placeholder='Course Name'
+                      value = {courseName}
+                      onChange = {(e)=> setcourseName(e.target.value) }
+                      />
+                    </div>
                   </div>
               </div>
               <br/>
               <div>
-                  <div className='label language'>Foreign Language</div>
-                  <div className='description language'>
+                  <div className='label language2'>Foreign Language</div>
+                  <div className='description language2'>
                       (The language your course will be teaching)
-                  </div>
-                  <div className='input langauge'>
-                    <input type="text"
-                    size="30"
-                    placeholder='Foreign Language'
-                    value = {language}
-                    onChange = {(e)=> setlanguage(e.target.value) }
-                    />
+                  
+                    <div className='input langauge'>
+                      <input type="text"
+                      size="30"
+                      placeholder='Foreign Language'
+                      value = {language}
+                      onChange = {(e)=> setlanguage(e.target.value) }
+                      />
+                    </div>
                   </div>
               </div>
               <br/>
               <div>
-                  <div className='label topic'>Topic</div>
-                  <div className='description topic'>
+                  <div className='label topic2'>Topic</div>
+                  <div className='description topic2'>
                       (The topic your course will be teaching)
                   </div>
-                  <div className='description topic2'>
+                  <div className='description topic3'>
                       (Right now we are only doing People.)
                   </div>
                   
