@@ -26,7 +26,7 @@ export default function DetailButtons(props) {
   const [Det, setDet] = useState();
   const[TrlData, setTrlData] = useState([]);
   const[LoadTrlData, setLoadTrlData] = useState([]);
-  const [Notes, setNotes] = useState([]);
+  const [Notes, setNotes] = useState('');
   const [AutoFill, setAutoFill] = useState(false);
   const [DeleteFill, setDeleteFill] = useState(false);
   

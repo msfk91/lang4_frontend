@@ -19,9 +19,12 @@ export const usePostTranslationHook = () =>{
     ) =>{
     
         setisLoading(true)
-        
-        
-            const response = await fetch("https://lang4-backend.onrender.com/translations",{
+            //"https://lang4-backend.onrender.com/translations"
+            //"http://localhost:5000/translations"
+            //const response = await fetch("http://localhost:5000/translations",
+            
+            const response = await fetch("https://lang4-backend.onrender.com/translations",
+            {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
@@ -31,7 +34,8 @@ export const usePostTranslationHook = () =>{
                     TranslationCategory, TranslationType,
                     TranslationNotes
                 })
-            })
+            }
+            )
             const json = await response.json()
     
             if (!response.ok){
